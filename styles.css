@@ -1,0 +1,268 @@
+/* ==============================================
+   RONMART UGC.AI - DESIGN SYSTEM
+   Colours: Navy #162940 | Cream #F8F4ED | Terracotta #C45434 | Gold #D4AF37
+============================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --navy: #162940;
+    --cream: #F8F4ED;
+    --terracotta: #C45434;
+    --gold: #D4AF37;
+    --text-dark: #222222;
+    --text-light: #666666;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: var(--cream);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 3.5rem;
+    color: var(--navy);
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: var(--navy);
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: var(--terracotta);
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: var(--text-light);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navigation */
+.navbar {
+    background: var(--navy);
+    padding: 1.2rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--cream);
+    text-decoration: none;
+}
+
+.logo span {
+    color: var(--gold);
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin-top: -2rem;
+    justify-content: flex-end;
+}
+
+.nav-links a {
+    color: var(--cream);
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover, .nav-links a.active {
+    color: var(--gold);
+}
+
+/* Hero */
+.hero {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(rgba(22, 41, 64, 0.05), rgba(22, 41, 64, 0.05));
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.gold {
+    color: var(--gold);
+}
+
+.subhead {
+    font-size: 1.4rem;
+    margin: 2rem 0;
+}
+
+.features {
+    display: flex;
+    gap: 1.5rem;
+    margin: 2rem 0;
+    flex-wrap: wrap;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    transition: all 0.3s;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+}
+
+.btn-primary {
+    background: var(--terracotta);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #a8472b;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--navy);
+    border: 2px solid var(--navy);
+}
+
+.btn-secondary:hover {
+    background: var(--navy);
+    color: var(--cream);
+}
+
+/* Grid & Cards */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border-top: 4px solid var(--gold);
+}
+
+.section-title {
+    text-align: center;
+    margin: 4rem 0 2rem;
+}
+
+/* ROI Calculator */
+.calculator-box {
+    background: white;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.input-group {
+    margin: 1.5rem 0;
+}
+
+label {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--navy);
+}
+
+input, select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.result {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: rgba(212, 175, 55, 0.1);
+    border-radius: 8px;
+    display: none;
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Footer */
+.footer {
+    background: var(--navy);
+    color: var(--cream);
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 5rem;
+}
+
+.footer p {
+    color: rgba(248, 244, 237, 0.7);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    h1 { font-size: 2rem; }
+    .nav-links {
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+}
